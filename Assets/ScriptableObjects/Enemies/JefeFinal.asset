@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19086452d7edfce4996b59da68e02221, type: 3}
   m_Name: JefeFinal
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  nombre: Enemigo
+  nombre: JefeFinal
   vidaMax: 500
   puntosAlMorir: 100
   danio: 35
