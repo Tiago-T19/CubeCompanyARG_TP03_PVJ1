@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19086452d7edfce4996b59da68e02221, type: 3}
   m_Name: EnemigoEspecial
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  nombre: Enemigo
+  nombre: EnemigoEspecial
   vidaMax: 150
   puntosAlMorir: 25
   danio: 25
   velocidad: 5
   detectionRadius: 8
-  attackRadius: 2
+  attackRadius: 1
   attackCooldown: 1.5
