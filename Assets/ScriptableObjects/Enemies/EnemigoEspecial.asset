@@ -18,5 +18,5 @@ MonoBehaviour:
   danio: 25
   velocidad: 5
   detectionRadius: 8
-  attackRadius: 2
+  attackRadius: 1
   attackCooldown: 1.5

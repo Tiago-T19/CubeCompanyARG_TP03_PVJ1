@@ -12,10 +12,10 @@ public class EnemigoEspecial : EnemyAI
         base.ExecuteAttack();
 
         // 2. Habilidad especial: lo deja lento 3 segundos
-        //var movPlayer = playerTransform.GetComponent<PlayerMovement>();
-        //if (movPlayer != null)
+        var movPlayer = playerTransform.GetComponent<PlayerMovement>();
+        if (movPlayer != null)
         {
-        //    movPlayer.Speed *= 0.5f;
+            movPlayer.Speed *= 0.5f;
             Invoke(nameof(RestaurarVelocidad), duracionRalentizacion);
         }
     }
@@ -26,8 +26,8 @@ public class EnemigoEspecial : EnemyAI
         var playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
-        //    var mov = playerObj.GetComponent<PlayerMovement>();
-        //    if (mov != null) mov.Speed = 5f; // tu velocidad normal
+            var mov = playerObj.GetComponent<PlayerMovement>();
+            if (mov != null) mov.Speed = 5f; // tu velocidad normal
         }
     }
 }
