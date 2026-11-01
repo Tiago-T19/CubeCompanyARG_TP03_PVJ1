@@ -1,12 +1,23 @@
+using System;
 using UnityEngine;
 
 public class MissionObject : MonoBehaviour
 {
-    // Prueba de interaccion
-    public void Interact()
-    {
-        Debug.Log($"<color=green>Recogido</color>");
+    public static event Action OnMissionObjectCollected; // Evento que avisa cuando se recoge un objeto de mision
 
+    private bool isCollected; // Comprueba si ya fue recogido
+
+    public void CollectMissionObject()
+    {
+        if (isCollected) return;
+
+        isCollected = true; // Marcamos el objeto como recogido
+
+        OnMissionObjectCollected?.Invoke(); // Avisamos que se recogio un objeto
+
+        Debug.Log("<color=purple>Objeto de mision recuperado</color>");
+
+        // Eliminamos el objeto del escenario
         Destroy(gameObject);
     }
 }
