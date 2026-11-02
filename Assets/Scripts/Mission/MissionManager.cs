@@ -26,14 +26,8 @@ public class MisionManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            PendingObject();
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            DeliverObjects(); // comprobar la entrega
-        }
+        if (Input.GetKeyDown(KeyCode.Q)) PendingObject();
+
     }
 
     private void RegisterCollectedObject()
@@ -52,11 +46,7 @@ public class MisionManager : MonoBehaviour
 
     public void DeliverObjects()
     {
-
-        if (PendingObjects <= 0)
-        {
-            return;
-        }
+        if (PendingObjects <= 0) return;
 
         deliveredObjects = recoveredObjects; // Registra la entrega
 
