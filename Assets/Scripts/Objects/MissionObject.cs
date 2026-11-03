@@ -15,8 +15,6 @@ public class MissionObject : MonoBehaviour
 
         OnMissionObjectCollected?.Invoke(); // Avisamos que se recogio un objeto
 
-        Debug.Log("<color=purple>Objeto de mision recuperado</color>");
-
         // Eliminamos el objeto del escenario
         Destroy(gameObject);
     }

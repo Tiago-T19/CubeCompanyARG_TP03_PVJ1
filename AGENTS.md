@@ -2,7 +2,7 @@
 - Project name: CubeCompanyARG_TP03_PVJ1
 - Unity version: Unity 6000.3.21f1
 - Active game object:
-  - Name: Cube
+  - Name: ScoreManager
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
