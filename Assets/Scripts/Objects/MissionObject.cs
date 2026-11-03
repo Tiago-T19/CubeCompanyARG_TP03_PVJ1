@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MissionObject : MonoBehaviour
 {
+    [SerializeField] float points; // Puntos que da el objeto de mision al ser recogido
     public static event Action OnMissionObjectCollected; // Evento que avisa cuando se recoge un objeto de mision
 
     private bool isCollected; // Comprueba si ya fue recogido
@@ -15,7 +16,12 @@ public class MissionObject : MonoBehaviour
 
         OnMissionObjectCollected?.Invoke(); // Avisamos que se recogio un objeto
 
-        // Eliminamos el objeto del escenario
-        Destroy(gameObject);
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.AddPoints((int)points); // Suma los puntos
+        }
+
+        Destroy(gameObject); // Eliminamos el objeto del escenario
+
     }
 }

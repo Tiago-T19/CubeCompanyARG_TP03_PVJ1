@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822577eea41ba8f4aa45ca21877fb59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionObject
+  points: 50
 --- !u!114 &86082441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822577eea41ba8f4aa45ca21877fb59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionObject
+  points: 50
 --- !u!114 &146247821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,6 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822577eea41ba8f4aa45ca21877fb59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionObject
+  points: 50
 --- !u!114 &546359316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,6 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822577eea41ba8f4aa45ca21877fb59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionObject
+  points: 50
 --- !u!114 &631479121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589b01427c0413041ae0d877c8954a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
-  missionObjectPoints: 50
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822577eea41ba8f4aa45ca21877fb59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionObject
+  points: 50
 --- !u!114 &1378472590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,6 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822577eea41ba8f4aa45ca21877fb59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionObject
+  points: 50
 --- !u!114 &1704787024
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,39 +1,38 @@
 using UnityEngine;
+
 public class ScoreManager : MonoBehaviour
 {
-    [Header("Puntuacion")]
-    [SerializeField] private int missionObjectPoints = 50;
+    public static ScoreManager Instance { get; private set; }
 
     private int currentScore;
+
     public int CurrentScore => currentScore;
 
-    private bool completionBonusesApplied;
-
-    private void OnEnable()
+    private void Awake()
     {
-        // Escuchamos cuando se recoge un objeto de mision.
-        MissionObject.OnMissionObjectCollected += RegisterMissionObjectPoints;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
     }
 
-    private void OnDisable()
+    public void AddPoints(int points) // Suma puntos
     {
-        MissionObject.OnMissionObjectCollected -= RegisterMissionObjectPoints;
-    }
-
-    // Suma puntos desde cualquier otro script.
-    public void AddPoints(int points)
-    {
-        if (points <= 0) return;
-
         currentScore += points;
 
-        Debug.Log($"<color=yellow><b>SCORE: {currentScore}</b></color>");
+        if (currentScore < 0) currentScore = 0; // Evita que sea negativo
+
+        Debug.Log($"<color=yellow><b>PUNTOS: {currentScore}</b></color>");
     }
 
-    // Puntos por recoger objetos de mision.
-    private void RegisterMissionObjectPoints()
+    private void OnDestroy()
     {
-        AddPoints(missionObjectPoints);
-        Debug.Log("Objeto de mision recuperado: puntos sumados.");
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 }
